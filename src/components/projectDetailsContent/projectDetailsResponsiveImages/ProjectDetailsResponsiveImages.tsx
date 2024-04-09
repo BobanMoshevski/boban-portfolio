@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
-import { ProjectDetailsResponsiveImagesType } from '../projectDetailsTypes/projectDetailsTypes';
 import {
-  getRandomNumber,
-  animationVariants,
-} from '../../animationVariants/animationsVariants';
+  AnimationVariantType,
+  ProjectDetailsResponsiveImagesType,
+} from '../projectDetailsTypes';
+import { imagesAnimationVariant } from '../projectDetalisAnimation';
 
 function ProjectDetailsResponsiveImages({
   desktopVersionSrc,
@@ -14,24 +14,7 @@ function ProjectDetailsResponsiveImages({
   mobileVersionSrc,
   mobileVersionAlt,
 }: ProjectDetailsResponsiveImagesType) {
-  const imagesVariant = animationVariants;
-  const imagesAnimation = {
-    initial: {
-      x: imagesVariant.initial.x[getRandomNumber(0, 2)],
-      y: imagesVariant.initial.y[getRandomNumber(0, 2)],
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.5,
-        delay: 0.5,
-        ease: imagesVariant.animate.transition.ease[getRandomNumber(0, 10)],
-      },
-    },
-  };
+  const imagesAnimation: AnimationVariantType = imagesAnimationVariant;
 
   return (
     <motion.div

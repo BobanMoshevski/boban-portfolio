@@ -7,6 +7,7 @@ import ProjectDetailsPage from '../pages/projectDetailsPage/ProjectDetailsPage';
 import ContactPage from '../pages/contactPage/ContactPage';
 import SuccessPage from '../pages/successPage/SuccessPage';
 
+// eslint-disable-next-line @typescript-eslint/typedef
 const router = createBrowserRouter([
   {
     path: '/',

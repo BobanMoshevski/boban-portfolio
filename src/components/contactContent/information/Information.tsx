@@ -1,20 +1,13 @@
 import { Link } from 'react-router-dom';
+import { InformationPropsType } from '../contactContentTypes';
 
-function Information({
-  info,
-  infoText,
-  margin,
-}: {
-  info: string;
-  infoText: string;
-  margin: boolean;
-}) {
-  const contactName = info === 'name';
-  const contactPhone = info === 'phone';
-  const contactEmail = info === 'email';
-  const contactGithub = info === 'github';
-  const contactLinkedin = info === 'linkedin';
-  const isGithubOrLinkedin = info === 'github' || info === 'linkedin';
+function Information({ info, infoText, margin }: InformationPropsType) {
+  const contactName: boolean = info === 'name';
+  const contactPhone: boolean = info === 'phone';
+  const contactEmail: boolean = info === 'email';
+  const contactGithub: boolean = info === 'github';
+  const contactLinkedin: boolean = info === 'linkedin';
+  const isGithubOrLinkedin: boolean = info === 'github' || info === 'linkedin';
 
   return (
     <div className={`flex flex-wrap items-center ${margin ? 'my-4' : 'my-0'}`}>

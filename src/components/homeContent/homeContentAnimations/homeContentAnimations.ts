@@ -1,4 +1,11 @@
-export const representationTextVariant = {
+import {
+  AboutImageVariantType,
+  AboutTextVariantType,
+  AboutVariantType,
+  RepresentationTextVariantType,
+} from '../homeContentTypes';
+
+export const representationTextVariant: RepresentationTextVariantType = {
   initial: {
     opacity: 0,
     scale: 0,
@@ -10,7 +17,7 @@ export const representationTextVariant = {
   },
 };
 
-export const aboutVariant = {
+export const aboutVariant: AboutVariantType = {
   initial: {
     y: 100,
   },
@@ -23,7 +30,7 @@ export const aboutVariant = {
   },
 };
 
-export const aboutImageVariant = {
+export const aboutImageVariant: AboutImageVariantType = {
   initial: {
     x: -100,
     opacity: 0,
@@ -38,7 +45,7 @@ export const aboutImageVariant = {
   },
 };
 
-export const aboutTextVariant = {
+export const aboutTextVariant: AboutTextVariantType = {
   initial: {
     x: 100,
     opacity: 0,

@@ -1,11 +1,7 @@
-function LabelForm({
-  labelFor,
-  onChange,
-}: {
-  labelFor: string;
-  onChange: (e: string) => void;
-}) {
-  const capitalizeLabelFor =
+import { LabelFormPropsType } from '../contactContentTypes';
+
+function LabelForm({ labelFor, onChange }: LabelFormPropsType) {
+  const capitalizeLabelFor: string =
     labelFor.charAt(0).toUpperCase() + labelFor.slice(1);
 
   return labelFor !== 'message' ? (

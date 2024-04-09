@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-
-import { ProjectsType } from '../homeContentTypes/homeContentTypes';
+import { Variants, motion } from 'framer-motion';
 import {
   animationVariants,
   getRandomNumber,
 } from '../../animationVariants/animationsVariants';
+import { ProjectsType } from '../homeContentTypes';
+import { AnimationVariants } from '../../animationVariants/AnimationsVariantsTypes';
 
 function ProjectCart({ project }: { project: ProjectsType }) {
-  const cartVariant = animationVariants;
-  const cartAnimation = {
+  const cartVariant: AnimationVariants = animationVariants;
+  const cartAnimation: Variants = {
     initial: {
-      x: cartVariant.initial.x[getRandomNumber(0, 2)],
-      y: cartVariant.initial.y[getRandomNumber(0, 2)],
+      x: cartVariant.initial?.x?.[getRandomNumber(0, 2)],
+      y: cartVariant.initial?.y?.[getRandomNumber(0, 2)],
       opacity: 0,
     },
     animate: {
@@ -22,7 +22,7 @@ function ProjectCart({ project }: { project: ProjectsType }) {
       transition: {
         duration: 1.5,
         delay: 0.7,
-        ease: cartVariant.animate.transition.ease[getRandomNumber(0, 10)],
+        ease: cartVariant.animate?.transition?.ease?.[getRandomNumber(0, 10)],
       },
     },
   };

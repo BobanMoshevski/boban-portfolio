@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import { ProjectDetailsDescriptionType } from '../projectDetailsTypes/projectDetailsTypes';
 import {
-  animationVariants,
-  getRandomNumber,
-} from '../../animationVariants/animationsVariants';
+  AnimationVariantType,
+  ProjectDetailsDescriptionType,
+} from '../projectDetailsTypes';
+import { descriptionAnimationVariant } from '../projectDetalisAnimation';
 
 function ProjectDetailsDescription({
   title,
@@ -15,26 +15,8 @@ function ProjectDetailsDescription({
   gitPath = '',
   deploy = '',
 }: ProjectDetailsDescriptionType) {
-  const descriptionVariant = animationVariants;
-  const descriptionAnimation = {
-    initial: {
-      x: descriptionVariant.initial.x[getRandomNumber(0, 2)],
-      y: descriptionVariant.initial.y[getRandomNumber(0, 2)],
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.5,
-        delay: 0.5,
-        ease: descriptionVariant.animate.transition.ease[
-          getRandomNumber(0, 10)
-        ],
-      },
-    },
-  };
+  const descriptionAnimation: AnimationVariantType =
+    descriptionAnimationVariant;
 
   return (
     <motion.div

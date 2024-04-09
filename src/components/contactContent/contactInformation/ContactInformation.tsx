@@ -1,31 +1,9 @@
-import { motion } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 import Information from '../information/Information';
-import {
-  animationVariants,
-  getRandomNumber,
-} from '../../animationVariants/animationsVariants';
+import { contactInforamtionAnimation } from '../contactAnimation';
 
 function ContactInformation() {
-  const contactInforamtionVariant = animationVariants;
-  const contactInformationAnimation = {
-    initial: {
-      x: contactInforamtionVariant.initial.x[getRandomNumber(0, 2)],
-      y: contactInforamtionVariant.initial.y[getRandomNumber(0, 2)],
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.5,
-        delay: 0.5,
-        ease: contactInforamtionVariant.animate.transition.ease[
-          getRandomNumber(0, 10)
-        ],
-      },
-    },
-  };
+  const contactInformationAnimation: Variants = contactInforamtionAnimation;
 
   return (
     <motion.div

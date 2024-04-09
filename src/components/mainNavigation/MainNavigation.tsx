@@ -4,7 +4,7 @@ import './MainNavigationStyle.css';
 
 function MainNavigation() {
   const { pathname } = useLocation();
-  const isHome = pathname === '/';
+  const isHome: boolean = pathname === '/';
 
   return (
     <div className="fixed top-0 w-[100%] text-center shadow-lg shadow-gray-500/50 nav-bg z-10">

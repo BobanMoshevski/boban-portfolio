@@ -9,11 +9,12 @@ import {
   representationTextVariant,
 } from '../homeContentAnimations/homeContentAnimations';
 import url from './resume/Resume-Boban-Moshevski.pdf';
+import { AboutInformationType } from '../../../util/projectsDataTypes/projectsDataTypes';
 import './AboutStyle.css';
 
 function About() {
-  const aboutInformation = about;
-  const pathResume = url;
+  const aboutInformation: AboutInformationType = about;
+  const pathResume: string = url;
 
   return (
     <div id="home" className="home-wrapper">

@@ -4,7 +4,7 @@ import ErrorMessage from '../../components/errorContetnt/ErrorMessage';
 
 function ErrorPage() {
   const { pathname } = useLocation();
-  const isErrorPage = pathname === '/error';
+  const isErrorPage: boolean = pathname === '/error';
 
   return (
     <>

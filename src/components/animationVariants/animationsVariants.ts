@@ -1,4 +1,6 @@
-export const animationVariants = {
+import { AnimationVariants } from './AnimationsVariantsTypes';
+
+export const animationVariants: AnimationVariants = {
   initial: {
     x: [0, 100, -100],
     y: [0, 100, -100],

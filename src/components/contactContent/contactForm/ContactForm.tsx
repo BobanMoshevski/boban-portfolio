@@ -1,51 +1,31 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 
 import LabelForm from '../labelForm/LabelForm';
-import {
-  animationVariants,
-  getRandomNumber,
-} from '../../animationVariants/animationsVariants';
+import { formAnimation } from '../contactAnimation';
 
 function ContactForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const navigate = useNavigate();
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const navigate: (arg: string) => void = useNavigate();
 
+  // eslint-disable-next-line @typescript-eslint/typedef
   const reg = /\S+@\S+\.\S+/;
-  const validFormBtn =
+  const validFormBtn: boolean =
     name.length !== 0 && message.length !== 0 && reg.test(email);
-  const contactFormVariant = animationVariants;
-  const contactFormAnimation = {
-    initial: {
-      x: contactFormVariant.initial.x[getRandomNumber(0, 2)],
-      y: contactFormVariant.initial.y[getRandomNumber(0, 2)],
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.5,
-        delay: 0.5,
-        ease: contactFormVariant.animate.transition.ease[
-          getRandomNumber(0, 10)
-        ],
-      },
-    },
-  };
+  const contactFormAnimation: Variants = formAnimation;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit: (e: React.FormEvent) => void = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const myForm = e.target as HTMLFormElement;
+    const myForm: HTMLFormElement = e.target as HTMLFormElement;
     const formData: FormData = new FormData(myForm);
 
     const formObject: Record<string, string> = {};
     formData.forEach((value, key) => {
+      // eslint-disable-next-line @typescript-eslint/no-base-to-string
       formObject[key] = value.toString();
     });
 

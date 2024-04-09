@@ -7,7 +7,8 @@ import ProjectDetailsResponsiveImages from '../projectDetailsResponsiveImages/Pr
 
 function ProjectDetails() {
   const { pathname } = useLocation();
-  const projectId = Number(pathname.split('/project')[1]);
+  const projectId: number | undefined = Number(pathname.split('/project')[1]);
+
   const [projectDetail] = projectsData.filter(
     (project) => project.id === projectId
   );

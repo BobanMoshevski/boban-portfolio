@@ -1,11 +1,16 @@
-export const aboutInformation = {
+import {
+  AboutInformationType,
+  ProjectsDataType,
+} from '../src/util/projectsDataTypes/projectsDataTypes';
+
+export const aboutInformation: AboutInformationType = {
   aboutText:
     'My name is Boban Moshevski. You being here means that you want to get to know about me and my experiences. My skills include HTML, CSS, SCSS, Less, Bootstrap, Tailwand, Javascript, JQuery, Typescript, React js, React Query, Jest, React Router, Next js, Node js, GraphQL as well as the fundamentals of Java. My curiosity and dedication provided me with the perfect platform to develop myself in all of these different proffessions, as I try to constantly improve myself. I bring passion into work, as well as never give-up attitude to the challenges.',
   imagePath: './boban-image/Boban.jpg',
   imageName: 'Boban image',
 };
 
-export const projectsData = [
+export const projectsData: ProjectsDataType[] = [
   {
     id: 1,
     projectTitle: 'Landing page for educational company',
