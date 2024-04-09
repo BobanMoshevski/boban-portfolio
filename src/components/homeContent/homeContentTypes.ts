@@ -1,9 +1,11 @@
-export interface RepresentationTextVariantType {
-  initial?: {
+import { Variants } from 'framer-motion';
+
+export interface RepresentationTextVariantType extends Variants {
+  initial: {
     opacity?: number;
     scale?: number;
   };
-  animate?: {
+  animate: {
     opacity?: number;
     scale?: number;
     transition?: {
@@ -12,11 +14,11 @@ export interface RepresentationTextVariantType {
   };
 }
 
-export interface AboutVariantType {
-  initial?: {
+export interface AboutVariantType extends Variants {
+  initial: {
     y?: number;
   };
-  animate?: {
+  animate: {
     y?: number;
     transition?: {
       duration?: number;
@@ -25,12 +27,12 @@ export interface AboutVariantType {
   };
 }
 
-export interface AboutImageVariantType {
-  initial?: {
+export interface AboutImageVariantType extends Variants {
+  initial: {
     x?: number;
     opacity?: number;
   };
-  animate?: {
+  animate: {
     x?: number;
     opacity?: number;
     transition?: {
@@ -40,12 +42,12 @@ export interface AboutImageVariantType {
   };
 }
 
-export interface AboutTextVariantType {
-  initial?: {
+export interface AboutTextVariantType extends Variants {
+  initial: {
     x?: number;
     opacity?: number;
   };
-  animate?: {
+  animate: {
     x?: number;
     opacity?: number;
     transition?: {
