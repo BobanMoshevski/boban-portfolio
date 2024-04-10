@@ -194,4 +194,45 @@ export const projectsData: ProjectsDataType[] = [
     pathToGit: 'https://github.com/BobanMoshevski/eat-and-split-the-bill',
     deploy: 'https://eat-and-split-bill01.netlify.app/',
   },
+  {
+    id: 6,
+    projectTitle: 'Movies watch list',
+    projectCart: {
+      imageSrc: './projects-images/project-6/project-img.png',
+      imageAlt: 'Movies watch list image',
+      description:
+        'The Movie Watch List is a user-friendly web application designed to help movie enthusiasts organize and track the movies they want to watch, have watched, and their top favorites. The application provides a comprehensive platform for users to manage their movie preferences efficiently.',
+    },
+    to: '/project6',
+    projectDetail: {
+      projectImages: {
+        desktopVersionSrc:
+          './projects-images/project-6/desktop-project-image.png',
+        desktopVersionAlt: 'Project desktop image',
+        tabletVersionSrc:
+          './projects-images/project-6/tablet-project-image.png',
+        tabletVersionAlt: 'Project tablet image',
+        mobileVersionSrc:
+          './projects-images/project-6/mobile-project-image.png',
+        mobileVersionAlt: 'Project mobile image',
+      },
+      description:
+        'The Movie Watch List is a user-friendly web application designed to help movie enthusiasts organize and track the movies they want to watch, have watched, and their top favorites. The application provides a comprehensive platform for users to manage their movie preferences efficiently.',
+      languagesAndUtilities: [
+        'HTML',
+        'CSS',
+        'Bootstrap 5',
+        'JavaScript',
+        'jQuery',
+      ],
+      projectFunctionalities: [
+        'Add to Watch List: Users can easily browse through a vast database of movies and add them to their watch list with just a click of a button. Each movie entry includes essential information such as title, genre, release year, director, and a brief synopsis.',
+        'Watched List: Once users have watched a movie from their watch list, they can mark it as watched. The movie will then be moved to their watched list, providing a clear distinction between movies yet to be seen and those already viewed.',
+        'Top Movies List: Users can curate a personalized list of their top favorite movies. By marking certain movies as favorites, users can create a dedicated list showcasing their most beloved films.',
+        'Search Functionality: The application offers a robust search feature that allows users to easily find specific movies within the database. Users can search by movie title.',
+      ],
+    },
+    pathToGit: 'https://github.com/BobanMoshevski/movies-watch-list',
+    deploy: 'https://movies-watch-list01.netlify.app/',
+  },
 ];
